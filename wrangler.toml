@@ -11,7 +11,7 @@ binding = "ASSETS"
 # Custom domain (optional)
 [route]
 pattern = "linkedin.kithailab.com"
-zone_id = "e20079a020f75adba044da5e30281102"
+zone_id = "b30ee253b6f78c8af546bcc381510e9d"
 custom_domain = true
 
 [vars]
