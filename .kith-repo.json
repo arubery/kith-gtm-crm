@@ -1,0 +1,7 @@
+{
+  "repo": "voiz-academy/kith-linkedin-crm",
+  "branch": "main",
+  "deploy": "github-actions",
+  "domain": null,
+  "status": "active"
+}
