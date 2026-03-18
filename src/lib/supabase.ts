@@ -4,15 +4,9 @@ import { createClient, SupabaseClient } from '@supabase/supabase-js'
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://tfcuozmbnnswencikncv.supabase.co'
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRmY3Vvem1ibm5zd2VuY2lrbmN2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc5MzU1NDUsImV4cCI6MjA2MzUxMTU0NX0.37WDHXS2HV81Oj_V8i_HkDbXWLVkzuUA-GSZgS3YckA'
 
-let supabaseInstance: SupabaseClient | null = null
-
-export const supabase = (() => {
-  if (supabaseInstance) return supabaseInstance
-  supabaseInstance = createClient(supabaseUrl, supabaseAnonKey, {
-    db: { schema: 'kith_lab' },
-  })
-  return supabaseInstance
-})()
+export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
+  db: { schema: 'kith_lab' },
+})
 
 export type OutreachStatus = 'not_contacted' | 'request_sent' | 'connected' | 'replied' | 'meeting_scheduled'
 
